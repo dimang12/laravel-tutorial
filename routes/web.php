@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TasksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+// Create Route for TasksController
+Route::controller(TasksController::class)->group(function () {
+    Route::get('/tasks', 'index');
+    Route::get('/tasks/test', 'test');
 });
