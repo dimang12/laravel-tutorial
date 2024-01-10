@@ -1,1 +1,31 @@
+body        { background: #f8f9fa;}
 
+/** sidebar */
+.sidebar a  { color: #f5f5f5; text-decoration: none; padding: 15px; display: block; position: relative; transition: ease-in-out background-color 0.5s;}
+.sidebar a:hover , .sidebar a:active,
+.sidebar a.active    { background-color: rgba(255, 255, 255, .2); color: #ffffff;}
+.sidebar a:focus     { color: #ffffff;}
+.sidebar a:before,
+.sidebar a.active:before    { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 0; background-color: rgba(255,255,255,.2); transition: ease-in-out height .5s;}
+.sidebar a:hover:before     { height: 100%; }
+.sidebar a.active:before    { height: 100%; }
+.icon       { margin-right: 10px; }
+
+/** dimensions */
+.logo-small { width: 80px; }
+.h-full     { height: 100vh; }
+
+/** colors */
+.bg-purple          { background-color: #6f42c1 !important; }
+.bg-purple-light    { background-color: #8a4baf !important; }
+.bg-purple-dark     { background-color: #553982 !important; }
+
+/* Override the hover state */
+.btn-outline-primary { transition: ease-in-out background-color 0.5s;}
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #553982;
+    border-color: #553982;
+}
+/** Shadow */
+.sr-shadow { box-shadow: 0 0 15px rgba(0,0,0,.05) !important; }
