@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TasksController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +14,16 @@ use App\Http\Controllers\TasksController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [DashboardController::class, 'index']);
 
 // Create Route for TasksController
 Route::controller(TasksController::class)->group(function () {
     Route::get('/tasks', 'index');
     Route::get('/tasks/test', 'test');
+});
+
+// Create Route for DashboardController
+Route::controller(DashboardController::class)->group(function () {
+    Route::get('/dashboard', 'index');
+    Route::get('/dashboard/test', 'test');
 });
