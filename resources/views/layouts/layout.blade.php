@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     @vite('resources/css/app.css')
     @vite('resources/js/plugins/codebase/grid.min.css')
+
+    @vite('resources/js/app.js')
+    @section('scripts')
+    @show
 </head>
 <body class="h-full m-0 p-0">
     <main class="d-flex bg-light h-100 m-0 p-0">
-        <div style="width: 300px;">
-            @include('layouts.left_navigation')
+        <div id="left-nav" class="navbar-lg">
+            @include('layouts.layout_left_navigation')
         </div>
         <div class="flex-grow-1 d-flex flex-column">
             @include('layouts.layout_header')
@@ -21,7 +25,5 @@
             @include('layouts.layout_footer')
         </div>
     </main>
-    @vite('resources/js/app.js')
-
 </body>
 </html>

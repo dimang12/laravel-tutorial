@@ -8,24 +8,25 @@
     <div class="h-100 bg-purple-dark flex-grow-1 m-0 sidebar-sticky sidebar">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link {{request()->routeIs('home') ? 'active' : '' }}" href="/">
                     <i class="fas fa-tachometer-alt icon"></i>
-                    Dashboard
+                    <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link {{request()->routeIs('projects.index') ? 'active' : ''}}" href="{{route('projects.index')}}" >
                     <i class="fas fa-folder icon"></i>
-                    Projects
+                    <span>Projects</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link {{request()->routeIs('tasks.index') ? 'active' : ''}}" href="{{route('tasks.index')}}">
                     <i class="fas fa-tasks icon"></i>
-                    Tasks
+                    <span>Tasks</span>
                 </a>
             </li>
         </ul>
     </div>
 </div>
+@vite('resources/views/layouts/left_navigation.js')
 

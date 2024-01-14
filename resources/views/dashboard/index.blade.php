@@ -4,11 +4,12 @@
 
 @section('content')
     <div class="container-fluid p-3">
-        <div class="row m-0">
-            <div class="col-12">
-                <h2 class="p-2 px-3 border rounded-3 bg-white">Dashboard</h2>
-            </div>
-        </div>
+        @component('partials.page_title')
+            @slot('title')
+                <span> {{ $page }} </span>
+                <span class="fw-lighter">Management</span>
+            @endslot
+        @endcomponent
         <div class="row m-0 mt-4">
             <div class="col-2">
                 <div class="card bg-secondary-subtle">
@@ -65,7 +66,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="card">
+                <div class="card bg-warning-subtle">
                     <div class="card-body sr-shadow wg-h-400 overflow-y-scroll d-flex flex-column ">
                         <h5 class="card-title border-bottom pb-3 ">Recent Activities</h5>
                         <p class="card-text flex-grow-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -83,7 +84,7 @@
                         <h5 class="card-title pb-3 ">Recent Tasks</h5>
                         <div class="h-100 w-100" id="grid"></div>
                         <div class="text-end mt-3">
-                            <a href="#" class="btn btn-outline-secondary rounded-pill">
+                            <a href="{{route("tasks.index")}}" class="btn btn-outline-secondary rounded-pill">
                                 <i class="fa fa-tasks me-1"></i>
                                 More Tasks
                             </a>
@@ -94,3 +95,9 @@
         </div>
     </div>
 @endsection
+
+@section('scripts')
+    @parent
+    @vite('resources/views/dashboard/dashboard.js')
+@endsection
+

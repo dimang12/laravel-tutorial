@@ -8,7 +8,8 @@ export default defineConfig({
                 'resources/css/app.css',
                 `resources/js/plugins/codebase/grid.css`,
                 'resources/js/bootstrap.js',
-                'resources/js/app.js'
+                // 'resources/js/app.js',
+                'resources/js/plugins/jquery.js',
             ],
             refresh: true,
         }),
