@@ -1,6 +1,5 @@
 import {LAYOUT} from "../../js/utils/layout_config.js";
 
-
 $(document).ready(function(){
     // on navbar toggle button click
     $('.navbar-toggler').on('click',function(){

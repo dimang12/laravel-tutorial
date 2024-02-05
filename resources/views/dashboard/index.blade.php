@@ -11,7 +11,7 @@
             @endslot
         @endcomponent
         <div class="row m-0 mt-4">
-            <div class="col-2">
+            <div class="col-3">
                 <div class="card bg-secondary-subtle">
                     <div class="card-body sr-shadow wg-h-400 d-flex flex-column">
                         <h5 class="card-title border-bottom pb-3">Working Hours</h5>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-5">
                 <div class="card">
                     <div class="card-body sr-shadow wg-h-400 d-flex flex-column">
                         <h5 class="card-title border-bottom pb-3">Upcoming Meeting</h5>
