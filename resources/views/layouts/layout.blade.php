@@ -23,6 +23,7 @@
                 @yield('content')
             </div>
             @include('layouts.layout_footer')
+            
         </div>
     </main>
 </body>
