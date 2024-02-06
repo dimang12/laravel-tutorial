@@ -8,6 +8,15 @@
                 <span> Tasks </span>
                 <span class="fw-lighter">Management</span>
             @endslot
+            @slot('addAction')
+                @include('partials.add_action')
+            @endslot
+            @slot('deleteAction')
+                @include('partials.delete_action')
+            @endslot
+            @slot('editAction')
+                @include('partials.edit_action')
+            @endslot
         @endcomponent
         <div class="row m-0 mt-4 flex-grow-1">
             <div class="col-12 h-100">
@@ -21,6 +30,8 @@
         </div>
     </div>
 @endsection
+@include('tasks.new_task')
+
 
 @section('scripts')
     @vite('resources/views/tasks/tasks.js')

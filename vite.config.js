@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/js/bootstrap.js',
                 // 'resources/js/app.js',
                 'resources/js/plugins/jquery.js',
+                'resources/js/plugins/boostrap.bundle.js'
             ],
             refresh: true,
         }),

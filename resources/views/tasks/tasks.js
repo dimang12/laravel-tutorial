@@ -94,4 +94,25 @@ document.addEventListener("DOMContentLoaded", function () {
         css: "rounded",
         selection: "row",
     });
+
+    // Bind event on submit form to add_new_task
+    $('#new_task_form').on('submit', function(e) {
+        e.preventDefault();
+
+        const formData = $(this).serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: '/tasks',
+            data: formData,
+            success: function(response) {
+                console.log(response);
+                // You can add more actions here based on the response
+            },
+            error: function(error) {
+                console.log(error);
+                // You can add more actions here based on the error
+            }
+        });
+    });
 });

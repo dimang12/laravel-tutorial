@@ -9,6 +9,7 @@
     @vite('resources/js/plugins/codebase/grid.min.css')
 
     @vite('resources/js/app.js')
+    @vite('resources/js/plugins/bootstrap.bundle.js')
     @section('scripts')
     @show
 </head>
@@ -23,7 +24,6 @@
                 @yield('content')
             </div>
             @include('layouts.layout_footer')
-            
         </div>
     </main>
 </body>

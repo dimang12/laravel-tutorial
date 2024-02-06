@@ -9,6 +9,11 @@
                 <span> {{ $page }} </span>
                 <span class="fw-lighter">Management</span>
             @endslot
+            @slot('addAction')
+                @include('partials.add_action')
+                @include('partials.delete_action')
+                @include('partials.edit_action')
+            @endslot
         @endcomponent
     </div>
 @endsection

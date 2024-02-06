@@ -21,6 +21,7 @@ Route::get('/', [DashboardController::class, 'index'])->name('home');
 Route::controller(TasksController::class)->group(function () {
     Route::get('/tasks', 'index')->name('tasks.index');
     Route::get('/tasks/test', 'test')->name('tasks.test');
+    Route::POST('/tasks', 'store')->name('tasks.store');
 });
 
 // Create Route for ProjectsController
